@@ -1,0 +1,137 @@
+/*** COMMON STYLES START ***/
+	body {
+		font-family: 'Oxygen', sans-serif;
+		background-image: url("../img/background.png");
+	}
+
+	.contents {
+		background-color: rgba(255,255,255,0.95);
+		height: 100vh;
+	}
+/*** COMMON STYLES END ***/
+
+/*** HEADER START ***/
+	#logo {
+		height: 300px;
+		width: 300px;
+		background-image: url('../img/logo.png');
+		background-size: 300px 300px;
+		background-repeat: no-repeat;
+		position: relative;
+		margin: 0;
+	}
+
+	#logo h1 {
+		font-family: 'Oswald', sans-serif;
+
+		position: absolute;
+		top: 33%;
+		
+		margin: 0;
+		padding: 5px 0;	
+		width: 100%;
+
+		text-align: center;
+		background-color: rgba(141,170,255,0.9);
+		color: white;
+	}
+
+	.navbar {
+		background: linear-gradient(180deg, rgba(60, 153, 220, 1.0), rgba(102, 211, 250, 1.0), rgba(213, 243, 254, 1.0)),
+					linear-gradient(90deg, rgba(37, 101, 174, 1.0), rgba(15, 82, 152, 1.0));
+	}
+
+	.navbar div:nth-child(1) {
+		margin-left: 10%;
+	}
+
+	.navbar div:nth-last-child(1) {
+		margin-right: 10%;
+	}
+
+/*** HEADER END ***/
+	
+
+/*** MAIN PAGE START ***/
+	#formSelector {
+		list-style-type: none;
+		padding: 20px 0 0 0;
+
+		justify-content: center;
+	}
+
+	#formSelector li:nth-child(1) {
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+
+	#formSelector li:nth-last-child(1) {
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+
+	#formSelector .button {
+		background-color: #0EBFE9;
+		color: white;
+
+		outline: none;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+
+		cursor: default;
+	}
+
+	#formSelector .button:hover {
+		background-color: white;
+		color: #0EBFE9;
+	}
+
+	#formSelector .button-active {
+		background-color: #63B8FF;
+		color: #003F87;
+	}
+
+	.field {
+		display: none;
+		padding: 10px;
+		text-align: center;
+	}
+/*** MAIN PAGE END ***/
+
+/*** ABOUT PAGE START ***/
+	#travelImages {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+
+		width: 500px;
+		height: 350px;
+		border-radius: 50px;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	#travelImages img{
+		width: 500px;
+		height: 350px;
+	}
+
+	.carousel-control-prev, .carousel-control-next {
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+
+
+	#about {
+		display: block;
+	}
+/*** ABOUT PAGE END ***/
+
+/*** CONTACT PAGE START ***/
+	#contact table {
+		width: 50%;
+		margin: auto;
+	}
+
+/*** CONTAGE PAGE END ***/
+

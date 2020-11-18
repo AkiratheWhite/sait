@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+
+		<form method="POST" action="bouncer.php">
+			<label for="firstName">First Name:</label> 
+			<input type="text" name="firstName" id=firstName/>
+			
+			<label for="lastName">Last Name:</label> 
+			<input type="text" name="lastName" id=lastName/>
+
+			<br>
+				<label for="mypassword">Password:</label>
+				<input type="password" name="passwd" id="mypassword" value="abc123">
+			<br>
+				<label>Send Advertisement?</label>
+				<input type="checkbox" name="sendinfo" id="sendinfo" checked="checked" value="sendspam"/>
+			<br>
+				Credit Card Type:
+			<br>
+				<label for="visa">Visa:</label>
+				<input type="radio" name="cardtype" id="visa" value="visa" checked="checked">
+
+				<label for="mcard">MasterCard:</label>
+				<input type="radio" name="cardtype" id="mcard" value="mcard">
+
+				<label for="amex">American Express:</label>
+				<input type="radio" name="cardtype" id="amex" value="amex">								
+			
+			<br>
+				Quantity:<input type="quantity" name="qty">
+			<br>
+				Birthdate:<input type="date" name="bday">
+			<br>
+				Email:<input type="email" name="email" required="required">
+			<br>
+				Favourite Travel Destination:
+					<select name="dest" multiple="multiple" size="2">
+						<option value="BF">Banff</option>
+						<option value="HW">Hawaii</option>
+						<option value="RD">Red Deer</option>
+						<option value="MJ">Moose Jaw</option>
+
+					</select>
+			<br>
+				Tell us your opinion:<textarea name="opinion"></textarea>
+			<br>
+				<input type="submit"/>
+				<input type="reset"/>
+		</form>
+
+	</body>
+
+</html>

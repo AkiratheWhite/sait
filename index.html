@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Travel Experts</title>
+		<meta charset="utf-8">
+		<meta content="OOSD, Java, Software Development">
+
+		 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+		<!--CSS Includes-->
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!--Font Includes-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+		<script type="text/javascript" src="js/functions.js"></script>
+
+	    <script> 
+	    $(function(){
+	      $("#header").load("header.html");
+	      
+	      $("#about").load("about.html");	
+	      $("#contact").load("contact.html");
+	      $("#register").load("register.html");
+
+	    });
+	    </script>
+
+	</head>
+
+	<body>
+		<header id="header">
+			
+		</header>
+
+   <div class="container contents">
+   	
+		<ul class="row" id="formSelector">
+			<li><button onclick="showAbout()" id="aboutButton" class="button button-active list-group-item">About</button></li>
+			<li><button onclick="showContact()" id="contactButton" class="button list-group-item">Contact</button></li>
+			<li><button onclick="showRegister()" id="registerButton" class="button list-group-item">Register Now</button></li>
+		</ul>
+
+    	<div id="about" class="field"></div>
+
+    	<div id="contact" class="field"></div>
+
+    	<div id="register" class="field"></div>
+	
+	</div>
+
+	</body>
+</html>
