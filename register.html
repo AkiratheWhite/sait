@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
+	<form method="POST" action="bouncer.php" onsubmit="return confirm('Do you want to submit your information now?');" onreset="return confirm('Do you want to reset the form?');">
+		<label for="firstName">First Name:</label> 
+		<input type="text" name="firstName" id=firstName/>
+		
+		<label for="lastName">Last Name:</label> 
+		<input type="text" name="lastName" id=lastName/>
 
-	<body>
+		<br>
+			<label for="mypassword">Password:</label>
+			<input type="password" name="passwd" id="mypassword" value="abc123">
+		<br>
+			<label>Send Advertisement?</label>
+			<input type="checkbox" name="sendinfo" id="sendinfo" checked="checked" value="sendspam"/>
+		<br>
+			<label>Credit Card Type:</label>
+		<br>
 
-		<form method="POST" action="bouncer.php">
-			<label for="firstName">First Name:</label> 
-			<input type="text" name="firstName" id=firstName/>
-			
-			<label for="lastName">Last Name:</label> 
-			<input type="text" name="lastName" id=lastName/>
-
-			<br>
-				<label for="mypassword">Password:</label>
-				<input type="password" name="passwd" id="mypassword" value="abc123">
-			<br>
-				<label>Send Advertisement?</label>
-				<input type="checkbox" name="sendinfo" id="sendinfo" checked="checked" value="sendspam"/>
-			<br>
-				Credit Card Type:
-			<br>
+			<div id="cardtype">
 				<label for="visa">Visa:</label>
 				<input type="radio" name="cardtype" id="visa" value="visa" checked="checked">
 
@@ -27,29 +26,31 @@
 
 				<label for="amex">American Express:</label>
 				<input type="radio" name="cardtype" id="amex" value="amex">								
-			
-			<br>
-				Quantity:<input type="quantity" name="qty">
-			<br>
-				Birthdate:<input type="date" name="bday">
-			<br>
-				Email:<input type="email" name="email" required="required">
-			<br>
-				Favourite Travel Destination:
-					<select name="dest" multiple="multiple" size="2">
-						<option value="BF">Banff</option>
-						<option value="HW">Hawaii</option>
-						<option value="RD">Red Deer</option>
-						<option value="MJ">Moose Jaw</option>
+			</div>
 
-					</select>
-			<br>
-				Tell us your opinion:<textarea name="opinion"></textarea>
-			<br>
-				<input type="submit"/>
-				<input type="reset"/>
-		</form>
-
-	</body>
-
+			<label for="quantity">Quantity:</label>
+			<input type="quantity" id="qty" name="qty">
+		<br>
+			<label for="bday">Birthdate:</label>
+			<input type="date" name="bday">
+		<br>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required="required">
+		<br>
+			<label for="dest">Favourite Travel Destination:</label>
+		<br>
+				<select name="dest" id="dest" multiple="multiple" size="2">
+					<option value="BF">Banff</option>
+					<option value="HW">Hawaii</option>
+					<option value="RD">Red Deer</option>
+					<option value="MJ">Moose Jaw</option>
+				</select>
+		<br>
+			<label for="opinion">Tell us your opinion:</label>
+		<br>
+			<textarea name="opinion" id="opinion"></textarea>
+		<br>
+			<input type="submit" id="submit" value="Register" />
+			<input type="reset" id="reset" value="Reset Form" />
+	</form>
 </html>

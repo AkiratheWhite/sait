@@ -94,8 +94,11 @@
 
 	.field {
 		display: none;
-		padding: 10px;
+		padding: 20px;
 		text-align: center;
+
+		border-radius: 30px;
+		background-color: rgb(176,226,255);
 	}
 /*** MAIN PAGE END ***/
 
@@ -135,6 +138,21 @@
 /*** CONTAGE PAGE END ***/
 
 /*** REGISTER PAGE START ***/
+	#register form > label {
+		font-weight: bold;
+	}
 
+	#cardtype {
+		margin: 0;
+	}
+
+	#register input, select, textarea {
+		border-radius: 5px;
+		border: 1px solid black;
+	}
+
+	#register input:focus, select:focus, textarea:focus {
+		background-color: #fff7dc;
+	}
 /*** REGISTER PAGE END ***/
 
