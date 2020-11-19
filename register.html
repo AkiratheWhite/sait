@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-	<form method="POST" action="bouncer.php" onsubmit="return confirm('Do you want to submit your information now?');" onreset="return confirm('Do you want to reset the form?');">
+
+	<form method="POST" action="bouncer.php" onsubmit="return confirmSubmit()" onreset="return confirmReset()">
 		<label for="firstName">First Name:</label> 
 		<input type="text" name="firstName" id=firstName/>
 		
@@ -53,4 +54,7 @@
 			<input type="submit" id="submit" value="Register" />
 			<input type="reset" id="reset" value="Reset Form" />
 	</form>
+
+	<script src="js/register-scripts.js"></script>
+
 </html>
