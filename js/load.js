@@ -1,4 +1,4 @@
-window.addEventListener('load', loadPage);
+window.addEventListener('load', loadPage); //Listens for the HTML and content to be loaded, and then triggers the loadPage function.
 
 function loadPage() {
   $("#header").load("header.html");
@@ -6,16 +6,4 @@ function loadPage() {
   $("#contact").load("contact.html");
   $("#register").load("register.html");
 }
-
-// function addListeners() {
-// 	document.getElementById("submit").addEventListener("click", submitConfirm); 
-// 	document.getElementById("reset").addEventListener("click", resetConfirm); 
-
-// 	function submitConfirm() {
-// 		confirm("Do you want to submit your information now?");
-// 	}
-
-// 	function resetConfirm() {
-// 		confirm("Do you want to reset the form?");
-// 	}
-// }
+// Uses JQuery to load in the components of the webpage. The function inputListners is invoked as a callback when completed.

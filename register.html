@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
+	<form id="registerForm" method="POST" action="bouncer.php" onsubmit="return confirmSubmit()" onreset="return confirmReset()">
+		<fieldset>
+			<div id="firstName-container" class="form-container">
+				<label class="bold" for="firstName">First Name:</label> 
+				<input type="text" name="firstName" id=firstName/>
+				<div class="form-desc">Enter your first name (no special characters).</div>
+			</div>
 
-	<form method="POST" action="bouncer.php" onsubmit="return confirmSubmit()" onreset="return confirmReset()">
-		<label for="firstName">First Name:</label> 
-		<input type="text" name="firstName" id=firstName/>
-		
-		<label for="lastName">Last Name:</label> 
-		<input type="text" name="lastName" id=lastName/>
+			<span id="lastName-container" class="form-container">
+				<label class="bold" for="lastName">Last Name:</label> 
+				<input type="text" name="lastName" id=lastName/>
+				<div class="form-desc">Enter your last name (no special characters).</div>
+			</span>
 
-		<br>
-			<label for="mypassword">Password:</label>
-			<input type="password" name="passwd" id="mypassword" value="abc123">
-		<br>
-			<label>Send Advertisement?</label>
-			<input type="checkbox" name="sendinfo" id="sendinfo" checked="checked" value="sendspam"/>
-		<br>
-			<label>Credit Card Type:</label>
-		<br>
+			<br>
 
-			<div id="cardtype">
+			<span id="password-container" class="form-container">
+				<label class="bold" for="mypassword">Password:</label>
+				<input type="password" name="passwd" id="mypassword" value="abc123">
+				<div class="form-desc">Enter your password.</div>
+			</span>
+
+			<br>
+
+			<span id="promo-container" class="form-container">
+				<label class="bold">Send Advertisement?</label>
+				<input type="checkbox" name="sendinfo" id="sendinfo" checked="checked" value="sendspam"/>
+				<div class="form-desc">Check the box if you would like to be notified about promotions.</div>
+			</span>
+
+			<br>
+
+			<label class="bold">Credit Card Type:</label>
+			
+			<br>
+
+			<span id="cardtype" class="form-container">
 				<label for="visa">Visa:</label>
 				<input type="radio" name="cardtype" id="visa" value="visa" checked="checked">
 
@@ -26,35 +44,54 @@
 				<input type="radio" name="cardtype" id="mcard" value="mcard">
 
 				<label for="amex">American Express:</label>
-				<input type="radio" name="cardtype" id="amex" value="amex">								
-			</div>
+				<input type="radio" name="cardtype" id="amex" value="amex">
+				
+				<div class="form-desc">Select your preferred payment method.</div>
+			</span>
 
-			<label for="quantity">Quantity:</label>
-			<input type="quantity" id="qty" name="qty">
-		<br>
-			<label for="bday">Birthdate:</label>
-			<input type="date" name="bday">
-		<br>
-			<label for="email">Email:</label>
-			<input type="email" name="email" id="email" required="required">
-		<br>
-			<label for="dest">Favourite Travel Destination:</label>
-		<br>
-				<select name="dest" id="dest" multiple="multiple" size="2">
-					<option value="BF">Banff</option>
-					<option value="HW">Hawaii</option>
-					<option value="RD">Red Deer</option>
-					<option value="MJ">Moose Jaw</option>
-				</select>
-		<br>
-			<label for="opinion">Tell us your opinion:</label>
-		<br>
-			<textarea name="opinion" id="opinion"></textarea>
-		<br>
-			<input type="submit" id="submit" value="Register" />
-			<input type="reset" id="reset" value="Reset Form" />
+			<br>
+
+			<span id="postCode-container" class="form-container">
+				<label class="bold" for="postCode">Postal Code:</label>
+				<input type="text" id="postCode" name="postCode">
+				<div class="form-desc">Enter your postal code.<br>Format: A1A 1A1</div>
+			</span>
+
+			<br>
+
+			<span id="birthDate-container" class="form-container">
+				<label class="bold" for="bday">Birthdate:</label>
+				<input type="date" name="bday" id="bday">
+				<div class="form-desc">Enter your birthdate.</div>
+			</span>
+
+			<br>
+
+			<span id="email-container" class="form-container">
+				<label class="bold" for="email">Email:</label>
+				<input type="email" name="email" id="email">
+				<div class="form-desc">Enter your email.<br>(e.g. user@domain.com)</div>		
+			</span>
+
+			<br>
+
+<!-- 				<label class="bold" for="dest">Favourite Travel Destination:</label>
+			<br>
+					<select name="dest" id="dest" multiple="multiple" size="2">
+						<option value="BF">Banff</option>
+						<option value="HW">Hawaii</option>
+						<option value="RD">Red Deer</option>
+						<option value="MJ">Moose Jaw</option>
+					</select>
+			<br>
+				<label class="bold" for="opinion">Tell us your opinion:</label>
+			<br>
+				<textarea name="opinion" id="opinion"></textarea>
+			<br> -->
+				<input type="submit" id="submit" value="Register" />
+				<input type="reset" id="reset" value="Reset Form" />
+		</fieldset>
 	</form>
 
-	<script src="js/register-scripts.js"></script>
-
+	<script src="js/register-scripts.js"></script> <!-- Contains scripts and functions that control the registration form. -->
 </html>

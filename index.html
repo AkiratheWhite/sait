@@ -27,30 +27,31 @@
 
 
 		<!-- JavaScript Includes -->
-	    <script src="js/load.js" defer></script>
-		<script src="js/functions.js" defer></script>
-
+	    <script src="js/load.js"></script> <!-- Contains JQuery methods that load parts of the webpage. -->
+		<script src="js/formSelector-scripts.js" defer></script> <!-- Contains functions that control the form buttoms. -->
 	</head>
 
 	<body>
 		<header id="header"></header>
 
-	   <div class="container contents">
-	   	
-			<ul class="row" id="formSelector">
-				<li><button onclick="showAbout()" id="aboutButton" class="button button-active list-group-item">About</button></li>
-				<li><button onclick="showContact()" id="contactButton" class="button list-group-item">Contact</button></li>
-				<li><button onclick="showRegister()" id="registerButton" class="button list-group-item">Register Now</button></li>
-			</ul>
+		<main>
+			<div class="container contents">
+				
+				<ul class="row" id="formSelector">
+					<li><button onclick="showAbout()" id="aboutButton" class="button button-active list-group-item">About</button></li>
+					<li><button onclick="showContact()" id="contactButton" class="button list-group-item">Contact</button></li>
+					<li><button onclick="showRegister()" id="registerButton" class="button list-group-item">Register Now</button></li>
+				</ul>
+				
+				<div id="about" class="field"></div>
 
-	    	<div id="about" class="field"></div>
+				<div id="contact" class="field"></div>
 
-	    	<div id="contact" class="field"></div>
+				<div id="register" class="field"></div>
 
-	    	<div id="register" class="field"></div>
-		
-		</div>
-
+			</div>
+			
+		</main>
 	</body>
 	    
 </html>
