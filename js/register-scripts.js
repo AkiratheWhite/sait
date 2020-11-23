@@ -28,7 +28,8 @@ function displayDesc(event) {
 
 	try {
 		var desc = document.querySelector("#" + parentId + "> .form-desc");
-		desc.style.display = "block";
+		desc.style.visibility = "visible";
+		desc.style.opacity = 1.0;
 	}
 	//The input description is a unique class and is selected using a Query Selector. However, an input form may not exist currently, so we will use a try method.
 	//If the input description can be found, it's display will be changed from none to block.
@@ -45,7 +46,8 @@ function hideDesc(event) {
 	
 	try {
 		var desc = document.querySelector("#" + parentId + "> .form-desc");
-		desc.style.display = "none";
+		desc.style.visibility = "hidden";
+		desc.style.opacity = 0;
 	}
 	
 	catch(err) {
