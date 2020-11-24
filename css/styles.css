@@ -51,7 +51,6 @@
 
 /*** HEADER END ***/
 	
-
 /*** MAIN PAGE START ***/
 	#formSelector {
 		list-style-type: none;
@@ -221,7 +220,8 @@
 
 		visibility: hidden;
 		opacity: 0;
-		transition: visibility 0.5s, opacity 0.5s;
+
+		transition: visibility 0s, opacity 0.25s;
 
 		top: 100%;
 		left: 0;

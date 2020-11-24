@@ -16,7 +16,6 @@ function showDesc() {
 	var parent = (event.target.parentNode || event.srcElement);
 	var parentId = parent.id;
 
-
 	try {
 		var desc = document.querySelector("#" + parentId + "> div");
 		//Finds the div tag within the parent tag. The div tag is used to contain the description.
@@ -71,13 +70,12 @@ var veneto = new Dest("Veneto", "Veneto is a northeastern Italian region stretch
 var destinations = [oahu, belieze, veneto];
 
 //Adds a table element to the travel images div.
-document.querySelector("#travelImages").innerHTML = "<table></table>";
+document.querySelector("#travelImages").appendChild(document.createElement("TABLE"));
 
 //Using a for loop, generate a table row to display the image of the destination in, along with the name.
 for (i=0; i<3; i++) {
 	//A table row element is added to the table.
 	var node = document.createElement("TR");
-	var anchor = document.createElement("A");
 
 	//Declares a variable to store the name of the destination. Converts to a lowercase form so that we can automatically populate the row ID.
 	var name = destinations[i]["name"].toLowerCase();
@@ -88,12 +86,31 @@ for (i=0; i<3; i++) {
 	//Sets the ID of the table row to be equal to the name of the destination, minus white spaces and all lowercased.
 	node.id = nodeId;
 
-	var html = "<img src=\"" + destinations[i]["imgUrl"] + "\"/>"  + "<span>" + destinations[i]["name"] + "</span>" + "<div>" + destinations[i]["desc"] + "</div>";
-	node.innerHTML = html;
+	//Creates an img element and sets the src attribute to the imgUrl provided.
+	var img = document.createElement("IMG");
+	img.setAttribute("src", destinations[i]["imgUrl"]);
 
-	anchor.href = destinations[i]["webUrl"];
+	//Creates a span element and text node. Sets the text node to the destination name and appends it to the span.
+	var span = document.createElement("SPAN");
+	var spanContents = document.createTextNode(destinations[i]["name"]);
+	span.appendChild(spanContents);
+
+	//Creates a div element and text node. Sets the text node to the destsination description and appends it to the div.
+	var div = document.createElement("DIV");
+	var divContents = document.createTextNode(destinations[i]["desc"]);
+	div.appendChild(divContents);
+
+	//Creates an anchor element and sets the href to the webUrl provided by the object.
+	var anchor = document.createElement("A");
+	anchor.setAttribute("href", destinations[i]["webUrl"]);
+
+	//Appends all of the newly created and content-populated elements to the table row element.
+	node.appendChild(img);
+	node.appendChild(span);
+	node.appendChild(div);
 	node.appendChild(anchor);
 
+	//Appends the table row element to the table node in about.html.
 	document.querySelector("#travelImages table").appendChild(node);
 
 }
